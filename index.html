@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.2/handlebars.js" integrity="sha256-N5vR06TQIR+YD8oS0yndB1pu/EITeijW52dwezEq7/g=" crossorigin="anonymous"></script>
+  <title>To do list</title>
+</head>
+<body>
+  <div class="wrapper">
+  <h1>Lista delle task:</h1>
+    <input id="input_add" type="text" name="" value="" placeholder="Inserisci qualcosa da fare">
+    <button id="send_btn" type="button" name="button">Inserisci</button>
+
+    <ul class="todo_list">
+
+    </ul>
+  </div>
+
+  <script id="entry-template" type="text/x-handlebars-template">
+    <li class="list_item" data-id="{{id}}">
+      <input id="update_input" type="text" name="" value="{{text}}" data-id="{{id}}">
+      <button id="update_button" type="button" name="button">Modifica l'elemento</button>
+      <span class="delete_btn">Elimina task</span></li>
+  </script>
+  <script src="js/script.js" charset="utf-8"></script>
+</body>
+</html>
